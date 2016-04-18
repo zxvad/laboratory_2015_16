@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BitmapEditor.cs" />
     <Compile Include="ContoursAlgorithmParams.cs" />
     <Compile Include="ContoursParamsForm.cs">
       <SubType>Form</SubType>
@@ -53,12 +54,15 @@
     <Compile Include="ContoursParamsForm.Designer.cs">
       <DependentUpon>ContoursParamsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invariants.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MapObject.cs" />
+    <Compile Include="MapObjectType.cs" />
     <Compile Include="OffsetAlgorithmParams.cs" />
     <Compile Include="OffsetParamsForm.cs">
       <SubType>Form</SubType>
