@@ -153,7 +153,7 @@
             // 
             // DeleteContoursParamsButton
             // 
-            this.DeleteContoursParamsButton.Location = new System.Drawing.Point(6, 346);
+            this.DeleteContoursParamsButton.Location = new System.Drawing.Point(6, 345);
             this.DeleteContoursParamsButton.Name = "DeleteContoursParamsButton";
             this.DeleteContoursParamsButton.Size = new System.Drawing.Size(129, 23);
             this.DeleteContoursParamsButton.TabIndex = 8;
@@ -164,14 +164,14 @@
             // ContoursParamsListBox
             // 
             this.ContoursParamsListBox.FormattingEnabled = true;
-            this.ContoursParamsListBox.Location = new System.Drawing.Point(6, 36);
+            this.ContoursParamsListBox.Location = new System.Drawing.Point(6, 35);
             this.ContoursParamsListBox.Name = "ContoursParamsListBox";
             this.ContoursParamsListBox.Size = new System.Drawing.Size(200, 304);
             this.ContoursParamsListBox.TabIndex = 1;
             // 
             // AddContoursParamsButton
             // 
-            this.AddContoursParamsButton.Location = new System.Drawing.Point(6, 7);
+            this.AddContoursParamsButton.Location = new System.Drawing.Point(6, 6);
             this.AddContoursParamsButton.Name = "AddContoursParamsButton";
             this.AddContoursParamsButton.Size = new System.Drawing.Size(155, 23);
             this.AddContoursParamsButton.TabIndex = 0;
