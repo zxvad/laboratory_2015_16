@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace AirNavSystem
 {
-    class MapObject
+    class MapObject : IMapObject
     {
         public List<Point> Points { get; }
         public Point Middlepoint { get; }

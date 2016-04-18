@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AirNavSystem
 {
-    class Invariants
+    class Invariants : IPointDetector<Invariants>
     {
         public double[] Values { get; }
 
