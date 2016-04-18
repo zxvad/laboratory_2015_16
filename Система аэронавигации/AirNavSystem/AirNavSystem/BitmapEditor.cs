@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace AirNavSystem
 {
-    class BitmapEditor
+    class BitmapEditor : IBitmapEditor
     {
         private Bitmap _bitmap;
 
@@ -31,7 +28,7 @@ namespace AirNavSystem
             throw new NotImplementedException();
         }
 
-        public Bitmap GetDifferenceBetweenFilters(int minuendDimension, int subtrahendDimension)
+        private Bitmap GetDifferenceBetweenFilters(int minuendDimension, int subtrahendDimension)
         {
             throw new NotImplementedException();
         }
