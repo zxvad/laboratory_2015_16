@@ -2,7 +2,7 @@
 
 namespace AirNavSystem
 {
-    class Invariants : IPointDetector<Invariants>
+    class Invariants : IPointDescriptor<Invariants>
     {
         public double[] Values { get; }
 
