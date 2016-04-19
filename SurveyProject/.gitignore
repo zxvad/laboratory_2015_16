@@ -1,0 +1,5 @@
+# ignore libreoffice temp files
+*.odt#
+# ignore vim temp files
+*.swp
+
