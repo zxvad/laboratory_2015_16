@@ -59,7 +59,7 @@
     <Compile Include="IContourDetector.cs" />
     <Compile Include="IMapObject.cs" />
     <Compile Include="Invariants.cs" />
-    <Compile Include="IPointDetector.cs" />
+    <Compile Include="IPointDescriptor.cs" />
     <Compile Include="IPreProcessor.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
