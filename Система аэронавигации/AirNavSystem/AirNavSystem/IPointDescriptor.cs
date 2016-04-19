@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace AirNavSystem
 {
-    interface IPointDetector<T>
-        where T : IPointDetector<T>
+    interface IPointDescriptor<T>
     {
         double [] Values { get; }
         double GetDistinctWith(T other);
