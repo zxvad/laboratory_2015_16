@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Greenhouse</string>
+    <string name="welcome">Добро пожаловать!</string>
+    <string name="error_connection">Нет соединения с интернетом</string>
+    <string name="temperature">Температура</string>
+    <string name="humidity">Влажность</string>
+    <string name="current_state">Сейчас</string>
+    <string name="report">Отчет</string>
+    <string name="settings">Настройки</string>
+</resources>
