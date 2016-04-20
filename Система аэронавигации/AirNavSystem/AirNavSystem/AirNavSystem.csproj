@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStorage2.cs" />
     <Compile Include="DataTypes\AlgorithmParams.cs" />
     <Compile Include="BitmapEditor.cs" />
     <Compile Include="DataTypes\ChainCode.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="DataStorage.cs" />
     <Compile Include="Interfaces\IBitmapEditor.cs" />
     <Compile Include="Interfaces\IContourDetector.cs" />
+    <Compile Include="Interfaces\IDataStorage.cs" />
     <Compile Include="Interfaces\IImageStorage.cs" />
     <Compile Include="ImageProcessor.cs" />
     <Compile Include="ImageStorage.cs" />
