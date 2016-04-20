@@ -10,9 +10,6 @@ export default class Header extends React.Component {
     return <header className="header">
       <div className="uui-header dark-green">
         <nav role="navigation">
-          <div className="epam-logo">
-            <img src="/images/Logo_Epam_White.svg" alt="" width="86"/>
-          </div>
           <Link to="/" className="brand-logo">Survey</Link>
           <ul className="uui-navigation nav navbar-nav">
             <NavLink activeClassName="active" to="/"><span>Dashboard</span></NavLink>
