@@ -2,14 +2,14 @@
 
 namespace AirNavSystem
 {
-    class ParametrsStorage : IParametrsStorage
+    class ParametrsStorage : IStorage<AlgorithmParams>
     {
-        public void StoreParams(params AlgorithmParams[] algorithmParams)
+        public AlgorithmParams[] Load()
         {
             throw new NotImplementedException();
         }
 
-        public AlgorithmParams[] LoadParams()
+        public void Store(params AlgorithmParams[] images)
         {
             throw new NotImplementedException();
         }

@@ -46,58 +46,57 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataStorage2.cs" />
-    <Compile Include="DataTypes\AlgorithmParams.cs" />
-    <Compile Include="BitmapEditor.cs" />
-    <Compile Include="DataTypes\ChainCode.cs" />
     <Compile Include="ContourDetector.cs" />
-    <Compile Include="DataTypes\ContoursAlgorithmParams.cs" />
-    <Compile Include="ContoursParamsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ContoursParamsForm.Designer.cs">
-      <DependentUpon>ContoursParamsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataStorage.cs" />
-    <Compile Include="Interfaces\IBitmapEditor.cs" />
-    <Compile Include="Interfaces\IContourDetector.cs" />
-    <Compile Include="Interfaces\IDataStorage.cs" />
-    <Compile Include="Interfaces\IImageStorage.cs" />
-    <Compile Include="ImageProcessor.cs" />
-    <Compile Include="ImageStorage.cs" />
-    <Compile Include="Interfaces\IMapObject.cs" />
+    <Compile Include="DataTypes\AlgorithmParams.cs" />
+    <Compile Include="DataTypes\ChainCode.cs" />
+    <Compile Include="DataTypes\ContoursAlgorithmParams.cs" />
     <Compile Include="DataTypes\Invariants.cs" />
-    <Compile Include="Interfaces\IParametrsStorage.cs" />
-    <Compile Include="Interfaces\IPointDescriptor.cs" />
-    <Compile Include="Interfaces\IImagePreProcessor.cs" />
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataTypes\MapObject.cs" />
     <Compile Include="DataTypes\MapObjectType.cs" />
-    <Compile Include="DataTypes\OffsetAlgorithmParams.cs" />
-    <Compile Include="OffsetParamsForm.cs">
+    <Compile Include="DataTypes\PointsAlgorithmParams.cs" />
+    <Compile Include="DataTypes\TopologicalGraph.cs" />
+    <Compile Include="Forms\ContoursParamsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OffsetParamsForm.Designer.cs">
-      <DependentUpon>OffsetParamsForm.cs</DependentUpon>
+    <Compile Include="Forms\ContoursParamsForm.Designer.cs">
+      <DependentUpon>ContoursParamsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParametrsStorage.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PointsParamsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PointsParamsForm.Designer.cs">
+      <DependentUpon>PointsParamsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImagePreProcessor.cs" />
+    <Compile Include="ImageProcessor.cs" />
+    <Compile Include="ImageStorage.cs" />
+    <Compile Include="Interfaces\IContourDetector.cs" />
+    <Compile Include="Interfaces\IDataStorage.cs" />
+    <Compile Include="Interfaces\IImagePreProcessor.cs" />
+    <Compile Include="Interfaces\IImageProcessor.cs" />
+    <Compile Include="Interfaces\IMapObject.cs" />
+    <Compile Include="Interfaces\IPointDescriptor.cs" />
+    <Compile Include="Interfaces\IPointsDetector.cs" />
+    <Compile Include="Interfaces\IStorage.cs" />
+    <Compile Include="ParametrsStorage.cs" />
+    <Compile Include="PointsDetector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DataTypes\TopologicalGraph.cs" />
-    <EmbeddedResource Include="ContoursParamsForm.resx">
+    <EmbeddedResource Include="Forms\ContoursParamsForm.resx">
       <DependentUpon>ContoursParamsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OffsetParamsForm.resx">
-      <DependentUpon>OffsetParamsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PointsParamsForm.resx">
+      <DependentUpon>PointsParamsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +120,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

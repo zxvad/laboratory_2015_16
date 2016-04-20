@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AirNavSystem
 {
-    public class ImageProcessor
+    public class ImageProcessor : IImageProcessor
     {
         ImagePreProcessor PreProcessor;
-        ContourDetector Detector;
+        ContourDetector ContourDetector;
+        PointsDetector PointsDetector;
 
-        public Point[] GetTrajectory(params Bitmap[] images)
+        public Point GetCurrentLocation(ContoursAlgorithmParams param, Bitmap image, Bitmap areaMap)
         {
             throw new NotImplementedException();
         }
 
-        public Point GetCurrentLocatin(Bitmap image, Bitmap areaMap)
+        public Point[] GetTrajectory(PointsAlgorithmParams param, params Bitmap[] images)
         {
             throw new NotImplementedException();
         }
