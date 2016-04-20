@@ -9,7 +9,7 @@ namespace AirNavSystem
             throw new NotImplementedException();
         }
 
-        public void Store(params AlgorithmParams[] images)
+        public void Store(params AlgorithmParams[] objects)
         {
             throw new NotImplementedException();
         }
