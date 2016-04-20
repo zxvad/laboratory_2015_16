@@ -3,6 +3,6 @@
     interface IStorage<T>
     {
         T[] Load();
-        void Store(params T[] images);
+        void Store(params T[] objects);
     }
 }
