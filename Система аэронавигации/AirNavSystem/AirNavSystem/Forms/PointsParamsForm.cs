@@ -12,7 +12,7 @@ namespace AirNavSystem
 {
     public partial class OffsetParamsForm : Form
     {
-        public OffsetAlgorithmParams param;
+        public PointsAlgorithmParams param;
 
         public OffsetParamsForm()
         {
@@ -23,7 +23,7 @@ namespace AirNavSystem
         private void OkButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
-            param = new OffsetAlgorithmParams
+            param = new PointsAlgorithmParams
             {
                 SmallMedianFilterSize = (int)SmallMedFilterUpDown.Value, 
                 LargeMedianFilterSize = (int)LargeMedFilterUpDown.Value

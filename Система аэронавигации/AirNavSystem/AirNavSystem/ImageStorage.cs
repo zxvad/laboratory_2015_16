@@ -3,14 +3,14 @@ using System.Drawing;
 
 namespace AirNavSystem
 {
-    public class ImageStorage : IImageStorage
+    public class ImageStorage : IStorage<Bitmap>
     {
-        public void StoreImages(params Bitmap[] images)
+        public Bitmap[] Load()
         {
             throw new NotImplementedException();
         }
 
-        public Bitmap[] LoadImages()
+        public void Store(params Bitmap[] images)
         {
             throw new NotImplementedException();
         }

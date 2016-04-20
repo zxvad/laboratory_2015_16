@@ -1,6 +1,6 @@
 ﻿namespace AirNavSystem
 {
-    public class AlgorithmParams
+    public abstract class AlgorithmParams
     {
     }
 }

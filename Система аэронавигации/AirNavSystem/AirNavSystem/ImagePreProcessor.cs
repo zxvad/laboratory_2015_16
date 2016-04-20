@@ -1,12 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 
 namespace AirNavSystem
 {
     class ImagePreProcessor : IImagePreProcessor
     {
+        public int[,] GetColorHistogram(Bitmap source)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Bitmap Contrast(Bitmap source, double threshold)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Bitmap Filter(Bitmap source, int dimension)
+        {
+            throw new NotImplementedException();
+        }
+
         static Color ToMono(Color source)
         {
             int color = (int)(source.R * 0.3 + source.G * 0.6 + source.B * 0.1);

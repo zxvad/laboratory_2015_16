@@ -16,6 +16,8 @@ namespace AirNavSystem
         List<Bitmap> Bitmaps;
         ContoursParamsForm contoursParamsForm;
         OffsetParamsForm offsetParamsForm;
+        ImageProcessor Processor;
+        DataStorage Storage;
 
         public MainForm()
         {

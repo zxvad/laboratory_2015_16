@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace AirNavSystem
 {
-    class DataStorage : IImageStorage, IParametrsStorage
+    class DataStorage : IDataStorage
     {
         ImageStorage imageStoage;
         ParametrsStorage parametrsStorage;
@@ -23,7 +23,7 @@ namespace AirNavSystem
             throw new NotImplementedException();
         }
 
-        public void StoreParams(params AlgorithmParams[] algorithmParams)
+        public void StoreParams(params AlgorithmParams[] algorthmParams)
         {
             throw new NotImplementedException();
         }
