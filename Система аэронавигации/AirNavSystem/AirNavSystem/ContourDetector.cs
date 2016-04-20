@@ -72,5 +72,15 @@ namespace AirNavSystem
         {
             throw new NotImplementedException();
         }
+
+        public ChainCode[] DescribeContours(Bitmap Contours)
+        {
+            throw new NotImplementedException();
+        }
+
+        public TopologicalGraph BuildGraphFromChainCode(ChainCode chainCode)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
