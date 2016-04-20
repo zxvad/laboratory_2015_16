@@ -1,6 +1,6 @@
 ﻿namespace AirNavSystem
 {
-    public class OffsetAlgorithmParams
+    public class OffsetAlgorithmParams : AlgorithmParams
     {
         public int SmallMedianFilterSize { get; set; }
         public int LargeMedianFilterSize { get; set; }

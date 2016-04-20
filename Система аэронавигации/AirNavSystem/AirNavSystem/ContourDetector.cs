@@ -5,7 +5,7 @@ namespace AirNavSystem
 {
     class ContourDetector : IContourDetector
     {
-        PreProcessor preProcessor;
+        ImagePreProcessor preProcessor;
         const int directionsCount = 8;
         static int[] offsetX = { 1, 1, 0, -1, -1, -1, 0, 1 };
         static int[] offsetY = { 0, 1, 1, 1, 0, -1, -1, -1 };

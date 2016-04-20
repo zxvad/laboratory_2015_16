@@ -2,7 +2,7 @@
 
 namespace AirNavSystem
 {
-    interface IPreProcessor
+    interface IImagePreProcessor
     {
         Bitmap EqualiseHistogram(Bitmap source);
         Bitmap GaussFilter(Bitmap source, int windowSize);

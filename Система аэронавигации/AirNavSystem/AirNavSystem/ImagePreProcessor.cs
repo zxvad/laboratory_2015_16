@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace AirNavSystem
 {
-    class PreProcessor : IPreProcessor
+    class ImagePreProcessor : IImagePreProcessor
     {
         static Color ToMono(Color source)
         {

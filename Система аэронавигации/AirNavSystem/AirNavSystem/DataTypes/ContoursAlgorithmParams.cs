@@ -1,6 +1,6 @@
 ﻿namespace AirNavSystem
 {
-    public class ContoursAlgorithmParams
+    public class ContoursAlgorithmParams : AlgorithmParams
     {
         public int MedianFilterSize { get; set; }
         public int Threshold { get; set; }
