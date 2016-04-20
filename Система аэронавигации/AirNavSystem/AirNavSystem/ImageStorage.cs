@@ -10,7 +10,7 @@ namespace AirNavSystem
             throw new NotImplementedException();
         }
 
-        public void Store(params Bitmap[] images)
+        public void Store(params Bitmap[] objects)
         {
             throw new NotImplementedException();
         }
