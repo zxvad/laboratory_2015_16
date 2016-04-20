@@ -3,7 +3,7 @@
     class ChainCode
     {
         public int[] Directions { get; }
-        public int Lingth { get; }
+        public int Length { get; }
 
         public ChainCode() { }
     }
