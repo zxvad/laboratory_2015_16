@@ -5,7 +5,7 @@ namespace AirNavSystem
 {
     class ContourDetector : IContourDetector
     {
-        PreProcessor preProcessor;
+        ImagePreProcessor preProcessor;
         const int directionsCount = 8;
         static int[] offsetX = { 1, 1, 0, -1, -1, -1, 0, 1 };
         static int[] offsetY = { 0, 1, 1, 1, 0, -1, -1, -1 };
@@ -69,6 +69,16 @@ namespace AirNavSystem
         }
 
         public Bitmap GetContours(Bitmap image, ContoursAlgorithmParams param)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ChainCode[] DescribeContours(Bitmap Contours)
+        {
+            throw new NotImplementedException();
+        }
+
+        public TopologicalGraph BuildGraphFromChainCode(ChainCode chainCode)
         {
             throw new NotImplementedException();
         }

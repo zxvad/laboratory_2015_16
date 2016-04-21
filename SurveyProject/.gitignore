@@ -2,4 +2,5 @@
 *.odt#
 # ignore vim temp files
 *.swp
-
+# ignore IDEA files
+.idea/
