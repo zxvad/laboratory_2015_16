@@ -2,7 +2,7 @@
 
 namespace AirNavSystem
 {
-    class ParametrsStorage : IStorage<AlgorithmParams>
+    class ParametrsStorage : IDataStorage<AlgorithmParams>
     {
         public AlgorithmParams[] Load()
         {
