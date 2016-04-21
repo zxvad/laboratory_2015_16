@@ -78,13 +78,12 @@
     <Compile Include="ImageProcessor.cs" />
     <Compile Include="ImageStorage.cs" />
     <Compile Include="Interfaces\IContourDetector.cs" />
-    <Compile Include="Interfaces\IDataStorage.cs" />
     <Compile Include="Interfaces\IImagePreProcessor.cs" />
     <Compile Include="Interfaces\IImageProcessor.cs" />
     <Compile Include="Interfaces\IMapObject.cs" />
     <Compile Include="Interfaces\IPointDescriptor.cs" />
     <Compile Include="Interfaces\IPointsDetector.cs" />
-    <Compile Include="Interfaces\IStorage.cs" />
+    <Compile Include="Interfaces\IDataStorage.cs" />
     <Compile Include="ParametrsStorage.cs" />
     <Compile Include="PointsDetector.cs" />
     <Compile Include="Program.cs" />

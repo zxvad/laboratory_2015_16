@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace AirNavSystem
 {
-    public class ImageStorage : IStorage<Bitmap>
+    public class ImageStorage : IDataStorage<Bitmap>
     {
         public Bitmap[] Load()
         {

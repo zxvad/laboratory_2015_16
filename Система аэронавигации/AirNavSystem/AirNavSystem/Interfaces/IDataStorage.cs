@@ -1,12 +1,8 @@
-﻿using System.Drawing;
-
-namespace AirNavSystem
+﻿namespace AirNavSystem
 {
-    interface IDataStorage
+    interface IDataStorage<T>
     {
-        void StoreParams(params AlgorithmParams[] algorthmParams);
-        AlgorithmParams[] LoadParams();
-        void StoreImages(params Bitmap[] images);
-        Bitmap[] LoadImages();
+        T[] Load();
+        void Store(params T[] objects);
     }
 }

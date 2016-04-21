@@ -3,29 +3,29 @@ using System.Drawing;
 
 namespace AirNavSystem
 {
-    class DataStorage : IDataStorage
+    class DataStorage : IDataStorage<Bitmap>,IDataStorage<AlgorithmParams>
     {
         ImageStorage imageStoage;
         ParametrsStorage parametrsStorage;
 
-        public Bitmap[] LoadImages()
+        AlgorithmParams[] IDataStorage<AlgorithmParams>.Load()
         {
-            throw new NotImplementedException();
+            return parametrsStorage.Load();
         }
 
-        public AlgorithmParams[] LoadParams()
+        Bitmap[] IDataStorage<Bitmap>.Load()
         {
-            throw new NotImplementedException();
+            return imageStoage.Load();
         }
 
-        public void StoreImages(params Bitmap[] images)
+        void IDataStorage<AlgorithmParams>.Store(params AlgorithmParams[] objects)
         {
-            throw new NotImplementedException();
+            parametrsStorage.Store(objects);
         }
 
-        public void StoreParams(params AlgorithmParams[] algorthmParams)
+        void IDataStorage<Bitmap>.Store(params Bitmap[] objects)
         {
-            throw new NotImplementedException();
+            imageStoage.Store(objects);
         }
     }
 }
