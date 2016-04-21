@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using EventoBackend.Entities;
 
 namespace EventoBackend.Services
 {
