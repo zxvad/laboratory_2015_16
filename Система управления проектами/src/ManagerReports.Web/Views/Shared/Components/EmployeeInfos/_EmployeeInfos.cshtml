@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ManagerReports.Services.Models.EmployeeTimeMoney>
+
+
+@foreach (var employeeInfo in Model)
+{
+    <tr>
+        <td class="left">@employeeInfo.EmployeeFullName</td>
+        <td/>
+        <td>@employeeInfo.TakenTime.TrimNonsignificantDigits()</td>
+        <td />
+        <td>@employeeInfo.TakenMoney.TrimNonsignificantDigits()</td>
+    </tr>
+}

@@ -1,0 +1,66 @@
+﻿body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.add-button {
+    cursor: pointer;
+}
+
+.remove-button {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    overflow: hidden;
+    outline:none;
+}
+
+.account-login {
+    border: 1px solid #CCCCCC;
+    margin: 100px auto 50px auto;
+    padding: 20px;
+    position: relative;
+    width: 350px;
+    height: 270px;
+}
+
+    .account-login input {
+        border: 1px solid #CCCCCC;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 5px 0;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .account-login button {
+        background-color: #2493ff;
+        border: 1px solid #2493FF;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        margin: 20px 0 0 0;
+        overflow: visible;
+        padding: 15px 8px;
+        width: 100%;
+    }
+
+    .account-login ul {
+        list-style: none;
+        color: #CC3030;
+    }
