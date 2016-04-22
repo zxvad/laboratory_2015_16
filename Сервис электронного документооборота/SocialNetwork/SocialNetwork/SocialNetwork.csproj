@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C10DF860-D220-4C54-A332-DEA44635AF76}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SocialNetwork</RootNamespace>
+    <AssemblyName>SocialNetwork</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FilesRepository\FilesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilesRepository\FilesForm.Designer.cs">
+      <DependentUpon>FilesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilesRepository\FilesRepository.cs" />
+    <Compile Include="FilesRepository\IFiles.cs" />
+    <Compile Include="Statistics\Gallery.cs" />
+    <Compile Include="Statistics\GalleryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics\GalleryForm.Designer.cs">
+      <DependentUpon>GalleryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\GalleryMenu.cs" />
+    <Compile Include="Statistics\IGallery.cs" />
+    <Compile Include="Statistics\IGalleryMenu.cs" />
+    <Compile Include="Gui\Gui.cs" />
+    <Compile Include="Gui\GuiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\GuiForm.Designer.cs">
+      <DependentUpon>GuiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\IGui.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Notification\INotify.cs" />
+    <Compile Include="Notification\Notify.cs" />
+    <Compile Include="Notification\NotifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification\NotifyForm.Designer.cs">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workers\IWorker.cs" />
+    <Compile Include="Workers\Worker.cs" />
+    <Compile Include="Workers\WorkerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workers\WorkerForm.Designer.cs">
+      <DependentUpon>WorkerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserAuth\IuserCheck.cs" />
+    <Compile Include="UserAuth\IUserAuth.cs" />
+    <Compile Include="UserAuth\IUserReg.cs" />
+    <Compile Include="UserAuth\User.cs" />
+    <Compile Include="UserAuth\UserAuth.cs" />
+    <Compile Include="UserAuth\UserAuthForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAuth\UserAuthForm.Designer.cs">
+      <DependentUpon>UserAuthForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAuth\UserReg.cs" />
+    <Compile Include="UserAuth\UserRegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAuth\UserRegForm.Designer.cs">
+      <DependentUpon>UserRegForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAuth\UserRet.cs" />
+    <Compile Include="UserAuth\UserRetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAuth\UserRetForm.Designer.cs">
+      <DependentUpon>UserRetForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FilesRepository\FilesForm.resx">
+      <DependentUpon>FilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\GalleryForm.resx">
+      <DependentUpon>GalleryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\GuiForm.resx">
+      <DependentUpon>GuiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification\NotifyForm.resx">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workers\WorkerForm.resx">
+      <DependentUpon>WorkerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuth\UserAuthForm.resx">
+      <DependentUpon>UserAuthForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuth\UserRegForm.resx">
+      <DependentUpon>UserRegForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAuth\UserRetForm.resx">
+      <DependentUpon>UserRetForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
