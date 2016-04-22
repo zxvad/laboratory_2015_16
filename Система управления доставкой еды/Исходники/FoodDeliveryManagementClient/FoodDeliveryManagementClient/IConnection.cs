@@ -13,5 +13,13 @@ namespace FoodDeliveryManagementClient
         void RegCompany(string companyName);
 
         void AuthCompany(string companyKey);
+
+        void RegManager(string name);
+
+        void AuthManager(string name, string password);
+
+        byte[] GetData();
+
+        void PostData(byte[] data);
     }
 }
