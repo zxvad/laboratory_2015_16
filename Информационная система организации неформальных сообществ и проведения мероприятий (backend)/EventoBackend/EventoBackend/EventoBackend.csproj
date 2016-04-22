@@ -44,6 +44,8 @@
     <Compile Include="API\Implementation\Answer.cs" />
     <Compile Include="API\Implementation\API.cs" />
     <Compile Include="API\Interfaces\IEventController.cs" />
+    <Compile Include="Identity\Interfaces\IIdentity.cs" />
+    <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Services\Implementation\GlobalService.cs" />
     <Compile Include="Services\Interfaces\IUserManager.cs" />
     <Compile Include="Models\EventFilter.cs" />
