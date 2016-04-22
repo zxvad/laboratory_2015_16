@@ -41,32 +41,4 @@
         android:layout_below="@+id/Password"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="nextactivity"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/Password"
-        android:layout_alignStart="@+id/Password"
-        android:layout_marginBottom="111dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Text"
-        android:id="@+id/show"
-        android:layout_below="@+id/AuthButton"
-        android:layout_toRightOf="@+id/AuthButton"
-        android:layout_toEndOf="@+id/AuthButton"
-        android:layout_marginTop="50dp" />
-
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressBar"
-        android:layout_below="@+id/show"
-        android:layout_centerHorizontal="true" />
-
 </RelativeLayout>
