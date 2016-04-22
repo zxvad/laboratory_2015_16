@@ -2,5 +2,6 @@
 {
     public class GroupFilter
     {
+        public string Place { get; set; }
     }
 }

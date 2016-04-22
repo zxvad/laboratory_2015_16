@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EventoBackend
+namespace EventoBackend.DB.Interfaces
 {
     public interface IDataStorage<T>
     {
