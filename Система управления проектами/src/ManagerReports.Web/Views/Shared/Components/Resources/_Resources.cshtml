@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ManagerReports.Services.Models.Resource>
+
+@foreach (var resource in Model)
+{
+    <tr>
+        <td colspan="5" class="center">@resource.Name</td>
+    </tr>
+
+    @Component.Invoke("EmployeeInfos", resource.EmployeesTimeMonies)
+
+    <tr class="bold">
+        <td />
+        <td>@resource.SoldHours.TrimNonsignificantDigits()</td>
+        <td>@resource.TakenTime.TrimNonsignificantDigits()</td>
+        <td>@resource.Rate.TrimNonsignificantDigits()</td>
+        <td>@resource.TakenMoney.TrimNonsignificantDigits()</td>
+    </tr>
+}

@@ -1,0 +1,28 @@
+﻿@model ManagerReports.Web.ViewModels.Models.ProjectResourcesModel
+
+<table class="project-details--resources">
+    <thead>
+        <tr>
+            <th>Ресурс</th>
+            <th>Время</th>
+            <th>Рейт</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var resource in Model.Resources)
+        {
+            <tr>
+                <td class="left">@resource.Name</td>
+                <td>@resource.SoldHours.TrimNonsignificantDigits()</td>
+                <td>@resource.Rate.TrimNonsignificantDigits()</td>
+            </tr>
+        }
+
+        <tr class="bold">
+            <td class="left">Итого</td>
+            <td>@Model.SoldHours.TrimNonsignificantDigits()</td>
+            <td>@Model.Budget.TrimNonsignificantDigits()</td>
+        </tr>
+    </tbody>
+</table>
