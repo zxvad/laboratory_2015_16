@@ -1,0 +1,47 @@
+﻿@using ManagerReports.Web.Controllers
+@using Microsoft.AspNet.Http
+
+@{
+    var beginDate = Context.Session.GetString("beginDate");
+
+    if (string.IsNullOrEmpty(beginDate))
+    {
+        beginDate = DateTime.Today.ToString("yyyy-MM-dd");
+        Context.Session.SetString("beginDate", beginDate);
+    }
+
+    var endDate = Context.Session.GetString("endDate");
+
+    if (string.IsNullOrEmpty(endDate))
+    {
+        endDate = DateTime.Today.ToString("yyyy-MM-dd");
+        Context.Session.SetString("endDate", endDate);
+    }
+}
+
+<a asp-controller="@ProjectsController.Name" asp-action="@ProjectsController.DefaultAction">Проекты</a>
+<br/>
+
+<a asp-controller="@EmployeesController.Name" asp-action="@EmployeesController.DefaultAction">Сотрудники</a>
+<br/>
+
+<br />
+
+<p>Построить отчет по датам:</p>
+
+<div>
+    <span>От:</span>
+    <input type="date" name="beginDateText" value="@beginDate" onchange="@("saveDatepickerDates()")">
+</div>
+
+<div>
+    <span>До: </span>
+    <input type="date" name="endDateText" value="@endDate" onchange="@("saveDatepickerDates()")">
+</div>
+
+<br/>
+
+<a asp-controller="@ReportsController.Name" asp-action="@ReportsController.ProjectsExcelReportAction">Скачать отчет по проектам</a>
+<br/>
+
+<a asp-controller="@ReportsController.Name" asp-action="@ReportsController.EmployeesExcelReportAction">Скачать отчет по сотрудникам</a>
