@@ -1,4 +1,6 @@
-﻿namespace EventoBackend.Services.Implementation
+﻿using EventoBackend.Services.Interfaces;
+
+namespace EventoBackend.Services.Implementation
 {
     public class GlobalService
     {

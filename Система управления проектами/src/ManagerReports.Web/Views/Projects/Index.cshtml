@@ -1,0 +1,42 @@
+﻿@using ManagerReports.Web.Controllers
+@model ManagerReports.Web.ViewModels.Pages.ProjectListPage
+
+<ul class="project-list">
+    @foreach (var project in @Model.Projects)
+    {
+        <li>
+            <a asp-controller="@ReportsController.Name" asp-action="@ReportsController.ProjectReportAction" asp-route-projectId="@project.Id">
+                <div class="project-item">
+                    <header class="project-item--header">
+                        <h2 class="project-item--header--title">@project.Name</h2>
+                    </header>
+
+                    @{
+                        var timeProgressPercent = project.TakenTime.Percentage(project.SoldHours).RoundToTen().Limit(100);
+                        var timeStyle = string.Concat("project-item--info--progress", timeProgressPercent);
+
+                        var moneyProgressPercent = project.TakenMoney.Percentage(project.Budget).RoundToTen().Limit(100);
+                        var moneyStyle = string.Concat("project-item--info--progress", moneyProgressPercent);
+                    }
+
+                    <section class="project-item--info">
+                        <div class="project-item--info--time">
+                            <span class="project-item--info--target-numbers">@project.SoldHours.TrimNonsignificantDigits()</span>
+                            <img class="project-item--info--timeicon" src="~/images/clock.svg"/>
+                            <div class="@timeStyle">
+                                <span class="project-item--info--progress-numbers">@project.TakenTime.TrimNonsignificantDigits()</span>
+                            </div>
+                        </div>
+                        <div class="project-item--info--money">
+                            <span class="project-item--info--target-numbers">@project.Budget.TrimNonsignificantDigits()</span>
+                            <img class="project-item--info--moneyicon" src="~/images/wallet.svg"/>
+                            <div class="@moneyStyle">
+                                <span class="project-item--info--progress-numbers">@project.TakenMoney.TrimNonsignificantDigits()</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </a>
+        </li>
+    }
+</ul>
