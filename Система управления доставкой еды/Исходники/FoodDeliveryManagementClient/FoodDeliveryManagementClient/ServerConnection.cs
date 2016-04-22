@@ -75,5 +75,25 @@ namespace FoodDeliveryManagementClient
                 string responseFromServer = httpContent.ReadAsStringAsync().Result;
             }
         }
+
+        public void RegManager(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AuthManager(string name, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        public byte[] GetData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PostData(byte[] data)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

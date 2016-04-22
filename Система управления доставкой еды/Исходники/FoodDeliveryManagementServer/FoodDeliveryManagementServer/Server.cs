@@ -130,6 +130,26 @@ namespace FoodDeliveryManagementServer
             }
         }
 
+        private void RegManager(TcpClient Client, string Request)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AuthManager(TcpClient Client, string Request)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void DownloadDataFromClient(TcpClient Client, string Request)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void UploadDataToClient(TcpClient Client, string Request)
+        {
+            throw new NotImplementedException();
+        }
+
         private string Expect100Handler(TcpClient Client)
         {
             string MessageText = "HTTP/1.1 100 Continue\n\n";
