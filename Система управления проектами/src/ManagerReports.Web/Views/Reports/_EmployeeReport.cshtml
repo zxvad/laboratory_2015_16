@@ -1,0 +1,63 @@
+﻿@model ManagerReports.Web.ViewModels.Pages.EmployeeDetailsPage
+
+<h2>@Model.EmployeeReport.Employee.FullName</h2>
+
+<h2>Затраченное время</h2>
+<table class="employee-details--resources" id="timeRecords">
+    <thead>
+    <tr>
+        <th>Название проекта</th>
+        <th>Ресурс</th>
+        <th>Дата</th>
+        <th>Количество часов</th>
+        <th>Задача</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var timeRecordGrouping in @Model.EmployeeReport.TimeRecords.GroupBy(i => i.ProjectName).OrderBy(i => i.Key))
+    {
+        foreach (var timeRecord in timeRecordGrouping)
+        {
+            <tr>
+                <td class="left">@timeRecordGrouping.Key</td>
+                <td class="left">
+                    @if (timeRecord.ResourceNames.Count() == 1)
+                    {
+                        <span>@timeRecord.ResourceNames.Single()</span>
+                    }
+
+                    @if (timeRecord.ResourceNames.Count() > 1)
+                    {
+                        <select class="time-record--dropdown">
+                            <option selected>Не задан</option>
+                            @foreach (var resourceName in timeRecord.ResourceNames)
+                            {
+                                <option value="@timeRecord.Id">@resourceName</option>
+                            }
+                        </select>
+                    }
+                </td>
+                <td class="center">@timeRecord.Date.ToShortDateString()</td>
+                <td>@timeRecord.Hours.TrimNonsignificantDigits()</td>
+                <td><a href="@string.Concat(@"http://task.htc-cs.com/issues/", timeRecord.IssueId)">Task #@timeRecord.IssueId</a></td>
+            </tr>
+        }
+
+        <tr>
+            <td/>
+            <td/>
+            <td/>
+            <td class="bold">@timeRecordGrouping.Sum(i => i.Hours).TrimNonsignificantDigits()</td>
+            <td/>
+        </tr>
+    }
+    <tr class="bold">
+        <td class="left">Итого</td>
+        <td></td>
+        <td></td>
+        <td>@Model.EmployeeReport.TimeRecords.Sum(i => i.Hours).TrimNonsignificantDigits()</td>
+        <td/>
+    </tr>
+    
+    </tbody>
+</table>

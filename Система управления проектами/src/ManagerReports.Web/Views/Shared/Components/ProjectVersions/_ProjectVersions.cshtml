@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ManagerReports.Services.Models.ProjectVerison>
+
+<table class="project-details--resources">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Статус</th>
+            <th>Дата создания</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var version in Model)
+        {
+            <tr>
+                <td>@version.Name</td>
+                <td>@version.Status</td>
+                <td>@version.CreatedOn.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>

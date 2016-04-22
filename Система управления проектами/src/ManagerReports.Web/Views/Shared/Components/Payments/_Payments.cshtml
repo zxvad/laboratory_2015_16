@@ -1,0 +1,24 @@
+﻿@model ManagerReports.Web.ViewModels.Models.PaymentModel
+
+<tr>
+    <th colspan="5">@Model.ProjectVersionName</th>
+</tr>
+
+@foreach (var payment in Model.Payments.OrderByDescending(i => i.Date))
+{
+    <tr id="@payment.Id" versionId="@payment.ProjectVersionId">
+        <td class="center">@payment.Date.ToShortDateString()</td>
+        <td>@payment.Amount.TrimNonsignificantDigits()</td>
+        <td>
+            <button class="remove-button">
+                <img class="project-item--paymenticon" src="~/images/delete.svg"/>
+            </button>
+        </td>
+    </tr>
+}
+
+<tr class="bold">
+    <td class="left">Итого</td>
+    <td>@Model.Payments.Sum(i => i.Amount).TrimNonsignificantDigits()</td>
+    <td colspan="3"/>
+</tr>

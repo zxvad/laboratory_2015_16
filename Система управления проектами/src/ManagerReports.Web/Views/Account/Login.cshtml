@@ -1,0 +1,20 @@
+﻿@using ManagerReports.Web.Controllers
+@model ManagerReports.Web.ViewModels.Models.LoginModel
+
+<div>
+    <form class="account-login" asp-controller="@AccountController.Name" asp-action="@AccountController.LoginAction" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" role="form">
+        <label for="login">Логин</label>
+        <input type="text" id="login" name="login" asp-for="@Model.Login"/>
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password" asp-for="@Model.Password"/>
+
+        @*<label for="rememberme">Запомнить меня</label>
+        <input type="checkbox" id="rememberme" name="rememberme" asp-for="@Model.RememberMe"/>*@
+
+        <button type="submit">Войти</button>
+
+        <div asp-validation-summary="ValidationSummary.All"></div>
+    </form>
+
+</div>
