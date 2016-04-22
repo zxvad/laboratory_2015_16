@@ -6,6 +6,5 @@ namespace EventoBackend.Identity.Interfaces
     {
         bool AddNewUser(RegistrationModel model);
         bool Authentication(string email, string password);
-        bool PasswordReset(string email);
     }
 }

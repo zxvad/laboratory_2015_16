@@ -40,14 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\Implementation\EventController.cs" />
+    <Compile Include="API\Implementation\GroupController.cs" />
+    <Compile Include="DB\Implementation\EventStorage.cs" />
+    <Compile Include="DB\Implementation\GroupStorage.cs" />
+    <Compile Include="DB\Implementation\UserStorage.cs" />
     <Compile Include="Entities\Event.cs" />
     <Compile Include="API\Implementation\Answer.cs" />
     <Compile Include="API\Implementation\API.cs" />
     <Compile Include="API\Interfaces\IEventController.cs" />
+    <Compile Include="Identity\Implementation\Identity.cs" />
     <Compile Include="Identity\Interfaces\IIdentity.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
+    <Compile Include="Services\Implementation\EventService.cs" />
     <Compile Include="Services\Implementation\GlobalService.cs" />
-    <Compile Include="Services\Interfaces\IUserManager.cs" />
+    <Compile Include="Services\Implementation\GroupService.cs" />
+    <Compile Include="Services\Implementation\ParticipantService.cs" />
     <Compile Include="Models\EventFilter.cs" />
     <Compile Include="Models\EventModel.cs" />
     <Compile Include="Entities\Group.cs" />
