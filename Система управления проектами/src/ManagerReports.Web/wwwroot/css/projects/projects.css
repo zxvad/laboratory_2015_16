@@ -1,0 +1,240 @@
+﻿a:link, a:visited {
+    text-decoration: none;
+}
+
+ul.project-list {
+    list-style-type: none;
+}
+
+    ul.project-list li {
+        float: left;
+        margin-right: 25px;
+    }
+
+.project-item {
+    width: 350px;
+    height: 380px;
+    text-align: center;
+    background: #CAE4F1;
+}
+
+.project-item--header {
+    background: #3D758E;
+    height: 80px;
+    width: inherit;
+}
+
+.project-item--header--title {
+    color: #FCFBFB;
+    line-height: 200%;
+    font-size: 15pt;
+}
+
+.project-item--info {
+    height: 300px;
+    position: relative;
+}
+
+.project-item--info--time {
+    width: 173px;
+    left: 0;
+    height: inherit;
+    position: absolute;
+    z-index: 1;
+}
+
+.project-item--info--timeicon {
+    height: 50px;
+    width: 50px;
+    top: 30%;
+    left: 60px;
+    position: absolute;
+    opacity: 0.1;
+    color: white;
+}
+
+.project-item--paymenticon {
+    height: 20px;
+    width: 20px;
+    color: white;
+    position: relative;
+}
+
+.project-item--info--money {
+    width: 173px;
+    right: 0;
+    height: inherit;
+    position: absolute;
+    z-index: 1;
+}
+
+.project-item--info--moneyicon {
+    height: 50px;
+    width: 50px;
+    top: 30%;
+    right: 60px;
+    position: absolute;
+    opacity: 0.1;
+    color: white;
+}
+
+.project-item--info--progress-numbers {
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    color: #FCFBFB;
+}
+
+.project-item--info--target-numbers {
+    position: absolute;
+    top: 10px;
+    left: 35%;
+    color: #FCFBFB;
+}
+
+table.project-details--resources {
+    width: 40%;
+    text-align: center;
+    border-collapse: collapse;
+    border-bottom: 1px solid #E5E5E5;
+    border-top: 1px solid #E5E5E5;
+    margin-bottom: 20px;
+}
+
+    table.project-details--resources th {
+        padding: 8px 5px;
+        color: #1f1f1f;
+        text-align: center;
+        border-right: 1px solid #E5E5E5;
+        font-weight: normal;
+        background: #efefef;
+    }
+
+    table.project-details--resources td {
+        padding: 8px 10px;
+        border-right: 1px solid #E5E5E5;
+    }
+
+    table.project-details--resources tr {
+        text-align: right;
+        border-left: 1px solid #E5E5E5;
+        border-top: 1px solid #E5E5E5;
+    }
+
+table.project-details--payments {
+    width: 20%;
+    border-collapse: collapse;
+    border-bottom: 1px solid #E5E5E5;
+    border-top: 1px solid #E5E5E5;
+    margin-bottom: 20px;
+}
+
+    table.project-details--payments th {
+        padding: 8px 5px;
+        color: #1f1f1f;
+        text-align: center;
+        border-right: 1px solid #E5E5E5;
+        font-weight: normal;
+        background: #efefef;
+    }
+
+    table.project-details--payments td {
+        padding: 8px 10px;
+        border-right: 1px solid #E5E5E5;
+    }
+
+    table.project-details--payments tr {
+        text-align: right;
+        border-left: 1px solid #E5E5E5;
+        border-top: 1px solid #E5E5E5;
+    }
+
+.project-item--info--progress10 {
+    height: 10%;
+    width: inherit;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    background: #84ADBF;
+}
+
+.project-item--info--progress20 {
+    height: 20%;
+    width: inherit;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    background: #84ADBF;
+}
+
+.project-item--info--progress30 {
+    height: 30%;
+    width: inherit;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    background: #84ADBF;
+}
+
+.project-item--info--progress40 {
+    height: 40%;
+    width: inherit;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    background: #84ADBF;
+}
+
+.project-item--info--progress50 {
+    height: 50%;
+    width: inherit;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    background: #84ADBF;
+}
+
+.project-item--info--progress60 {
+    height: 60%;
+    width: inherit;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    background: #84ADBF;
+}
+
+.project-item--info--progress70 {
+    height: 70%;
+    width: inherit;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    background: #84ADBF;
+}
+
+.project-item--info--progress80 {
+    height: 80%;
+    width: inherit;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    background: #84ADBF;
+}
+
+.project-item--info--progress90 {
+    height: 90%;
+    width: inherit;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    background: #84ADBF;
+}
+
+.project-item--info--progress100 {
+    height: 100%;
+    width: inherit;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    background: #84ADBF;
+}

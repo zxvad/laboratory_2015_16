@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "description": "RedmineTool Console Application",
+  "authors": [ "gevv" ],
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "commands": {
+    "me": "run"
+  },
+
+  "dependencies": {
+    "ManagerReports.Dal": "1.0.0",
+    "Newtonsoft.Json": "7.0.1",
+    "Serilog.Framework.Logging": "1.0.0-rc1-final-10083"
+  },
+
+  "frameworks": {
+    "dnx451": { }
+  }
+}

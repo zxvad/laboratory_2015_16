@@ -1,0 +1,9 @@
+﻿@using ManagerReports.Web.Controllers
+@model ManagerReports.Web.ViewModels.Pages.EmployeeListPage
+
+@foreach (var employee in @Model.Employees.OrderBy(i => i.FullName))
+{
+    <p>
+        <a asp-controller="@ReportsController.Name" asp-action="@ReportsController.EmployeeReportAction" asp-route-employeeId="@employee.Id">@employee.FullName</a>
+    </p>
+}

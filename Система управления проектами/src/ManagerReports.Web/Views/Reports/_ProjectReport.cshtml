@@ -1,0 +1,116 @@
+﻿@using ManagerReports.Web.ViewModels.Models
+@model ManagerReports.Web.ViewModels.Pages.ProjectReportPage
+
+@{
+    Model.PageTitle = Model.Project.Project.Name;
+}
+
+<input type="hidden" id="projectId" value="@Model.Project.Project.Id"/>
+
+<h2>Себестоимость проекта</h2>
+<span>@Model.Project.SelfCost.TrimNonsignificantDigits()</span>
+
+<h2>Версии</h2>
+@Component.Invoke("ProjectVersions", Model.Project.ProjectVerisons)
+
+<h2>Ресурсы c разбивкой по версиям</h2>
+<table class="project-details--resources">
+    <thead>
+    <tr>
+        <th>Ресурс/сотрудник</th>
+        <th>Оценка (время)</th>
+        <th>Факт (время)</th>
+        <th>Рейт</th>
+        <th>Факт (деньги)</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <th colspan="5">Ресурсы без версии</th>
+    </tr>
+    @Component.Invoke("Resources", Model.Project.Resources)
+
+    @if (Model.Project.EmployeesWithoutResource.Any())
+    {
+        <tr>
+            <td colspan="5" class="center">Без привязки к ресурсам</td>
+        </tr>
+
+        @Component.Invoke("EmployeeInfos", Model.Project.EmployeesWithoutResource)
+    }
+
+    <tr>
+        <th colspan="5">Версии</th>
+    </tr>
+    @foreach (var version in Model.Project.ProjectVerisons.OrderByDescending(i => i.Status).ThenByDescending(i => i.CreatedOn))
+    {
+        <tr>
+            <th colspan="2">Версия</th>
+            <th colspan="2">Статус</th>
+            <th>Создан</th>
+        </tr>
+        <tr>
+            <td colspan="2" class="center">@version.Name</td>
+            <td colspan="2" class="center">@version.Status</td>
+            <td class="center">@version.CreatedOn.ToShortDateString()</td>
+        </tr>
+
+        @Component.Invoke("Resources", version.Resources)
+
+        if (version.EmployeesWithoutResource.Any())
+        {
+            <tr>
+                <td colspan="5" class="center">Без привязки к ресурсам</td>
+            </tr>
+
+            @Component.Invoke("EmployeeInfos", version.EmployeesWithoutResource)
+        }
+    }
+
+    <tr class="bold">
+        <td class="left">Итого</td>
+        <td>@Model.Project.Project.SoldHours.TrimNonsignificantDigits()</td>
+        <td>@Model.Project.Project.TakenTime.TrimNonsignificantDigits()</td>
+        <td>@Model.Project.Project.Budget.TrimNonsignificantDigits()</td>
+        <td>@Model.Project.Project.TakenMoney.TrimNonsignificantDigits()</td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Платежи</h2>
+<table id="payments" class="project-details--payments">
+    <thead>
+    <tr>
+        <th>Дата оплаты</th>
+        <th>Сумма</th>
+        <th colspan="3"></th>
+    </tr>
+    </thead>
+    <tbody>
+
+    @Component.Invoke("Payments", new PaymentModel
+    {
+        ProjectId = Model.Project.Project.Id,
+        ProjectVersionName = "Без привязкии к версиям",
+        Payments = Model.Project.Payments.Where(i => !i.ProjectVersionId.HasValue).ToArray()
+    })
+
+    @foreach (var version in Model.Project.ProjectVerisons)
+    {
+        @Component.Invoke("Payments", new PaymentModel
+        {
+            ProjectId = Model.Project.Project.Id,
+            ProjectVersionName = version.Name,
+            Payments = version.Payments
+        })
+    }
+
+    </tbody>
+</table>
+
+<div>
+    <button class="add-template">
+        <img class="project-item--paymenticon" src="~/images/plus.svg"/>
+    </button>
+</div>

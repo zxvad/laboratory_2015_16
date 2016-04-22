@@ -1,0 +1,5 @@
+﻿{
+  "Data": {
+    "ConnectionString": "Server=PC353\\SQLEXPRESS;Database=ManagerReports;User Id=gevv;Password=1234;Trusted_Connection=False;"
+  }
+}
