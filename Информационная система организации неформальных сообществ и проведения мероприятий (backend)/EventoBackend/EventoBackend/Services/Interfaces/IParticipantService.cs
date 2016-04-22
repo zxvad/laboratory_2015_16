@@ -1,6 +1,6 @@
 ﻿using EventoBackend.Entities;
 
-namespace EventoBackend.Services
+namespace EventoBackend.Services.Interfaces
 {
     public interface IParticipantService
     {
@@ -8,5 +8,6 @@ namespace EventoBackend.Services
         bool AddInEvent(User user, Event @event);
         User GetAllUsersGroup(Group group);
         User GetUsersInEvent(Event @event);
+        User GetById(int id);
     }
 }

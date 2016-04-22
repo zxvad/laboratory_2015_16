@@ -12,9 +12,11 @@ namespace EventoBackend.Services.Implementation
         private IGroupService _groupService;
         private IParticipantService _participantService;
 
-        public ParticipantService(UserStorage userStorage)
+        public ParticipantService(UserStorage userStorage, IParticipantService participantService, IGroupService groupService)
         {
             _userStorage = userStorage;
+            _participantService = participantService;
+            _groupService = groupService;
         }
 
         public bool AddInGroup(User user, Group @group)
