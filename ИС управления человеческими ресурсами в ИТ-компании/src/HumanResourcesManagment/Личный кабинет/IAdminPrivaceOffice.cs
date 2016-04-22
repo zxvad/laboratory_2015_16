@@ -8,6 +8,5 @@ namespace HumanResourcesManagment
         void Show();
         void Event();
         void AllListRequest(string data);
-
     }
 }
