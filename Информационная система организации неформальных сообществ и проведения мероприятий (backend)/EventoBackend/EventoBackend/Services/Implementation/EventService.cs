@@ -20,7 +20,7 @@ namespace EventoBackend.Services.Implementation
 
         public Event CreateEvent(User user, Group @group, EventModel model)
         {
-            var countEventToday = user.GroupIds
+            var countEventToday = user.CreatedEventId
                 .Select(id => _eventService.GetById(id))
                 .Count(e => e.CreatedTIme > DateTime.Today.AddDays(-1));
             if (countEventToday >= 10) return null;
