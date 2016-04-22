@@ -1,0 +1,39 @@
+﻿@using ManagerReports.Web.ViewModels.Pages
+@model PageBase
+
+@{
+    var viewModel = Model ?? new PageBase();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Менеджерские отчеты - @viewModel.PageTitle</title>
+
+    <environment names="Development,Production">
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/projects/projects.css"/>
+        <link rel="stylesheet" href="~/css/employees/employees.css"/>
+
+        <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="~/js/site.js"></script>
+        
+    </environment>
+
+    @*<environment names="Production">
+        <link rel="stylesheet" href="~/css/site.min.css" />
+        <link rel="stylesheet" href="~/css/projects/projects.min.css"/>
+        <link rel="stylesheet" href="~/css/employees/employees.min.css"/>
+
+        <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="~/js/site.min.js"></script>
+    </environment>*@
+</head>
+<body>
+    <h1>@viewModel.PageTitle</h1>
+
+    @RenderBody()    
+</body>
+</html>
