@@ -4,6 +4,6 @@ namespace HumanResourcesManagment
 {
     public interface IWorkloadManager
     {
-        void Event (Delegate eventDelegate);         
+        void Event ();         
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,15 @@ namespace HumanResourcesManagment
 {
     class Program
     {
+        private static PrivaceOffice privaceOffice;
+        private static WorkloadManager workManager;
+        private static DBManager dbManager;
+
         static void Main(string[] args)
-        {
-            var privaceOffice = new PrivaceOffice();   
-            var workManager = new WorkloadManager();
-            var dbManager = new DBManager();
+        { 
+            privaceOffice.Authorization("admin", "1234");
+            workManager.Event();
+            dbManager.Add();
         }
     }
 }

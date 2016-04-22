@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace HumanResourcesManagment
 {
@@ -7,7 +8,7 @@ namespace HumanResourcesManagment
         private Dictionary<Developer, Project> developersDictionary;
         private Dictionary<Manager, List<Project>> managerDictionary;
           
-        public void Show()
+        public Delegate Show()
         {
             throw new System.NotImplementedException();
         }
